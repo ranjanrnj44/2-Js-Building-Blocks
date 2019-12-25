@@ -1,0 +1,65 @@
+<!--html start-->
+<html>
+    <!--head start-->
+    <head>
+        <title>Else_if Conditional</title>
+        <!--css start-->
+        <!--<link rel = "stylesheet" href="style.css"/>-->
+        <!--css end-->
+    </head>
+    <!--head end-->
+    
+    <!--body start-->
+    <body>
+        <!--section end-->
+        <section>
+
+           <label for="weather">Select any of your choice : </label>
+           
+            <select id="weather">
+              <option value=""><em>MAKE YOUR CHOICE</em></option>
+                <option value="ReactJs">ReactJs</option>
+                  <option value="AngularJs">AngularJs</option>
+                <option value="NodeJs">NodeJs</option>
+              <option value="GatsbyJs">GatsbyJs</option>
+            </select>
+
+            <p></p>
+
+        </section>
+        <!--section end-->
+    </body>
+    <!--body end-->
+
+    <!--script start-->
+    <script>
+        let select = document.querySelector(`select`);
+        let para = document.querySelector(`p`);
+
+        select.addEventListener(`change` , see_change);
+
+        function see_change(){
+            let my_choice = select.value;
+            //here comes the Else_if changes
+            if(my_choice === `ReactJs`){
+                para.textContent = `you've selected ${my_choice.toUpperCase()}`;
+                //console.log(my_choice);
+            }
+                else if(my_choice === `AngularJs`){
+                    para.textContent = `you've selected ${my_choice.toUpperCase()}`;
+                }
+                else if(my_choice === `NodeJs`){
+                    para.textContent = `you've selected ${my_choice.toUpperCase()}`;
+                }
+                else if(my_choice === `GatsbyJs`){
+                    para.textContent = `you've selected ${my_choice.toUpperCase()}`;
+                }
+                    else{
+                        para.textContent = ` `;
+                        alert(`Select any value mate`);
+                    }
+        }
+    </script>
+    <!--script end-->
+</html>
+<!--html end-->
