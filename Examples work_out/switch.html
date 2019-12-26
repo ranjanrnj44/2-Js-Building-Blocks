@@ -1,0 +1,69 @@
+<!--html start-->
+<html>
+    <!--head start-->
+    <head>
+        <title>Else_if Conditional</title>
+        <!--css start-->
+        <!--<link rel = "stylesheet" href="style.css"/>-->
+        <!--css end-->
+    </head>
+    <!--head end-->
+    
+    <!--body start-->
+    <body>
+        <!--section end-->
+        <section>
+
+           <label for="weather">Select any of your choice : </label>
+           
+            <select id="weather">
+              <option value=""><em>MAKE YOUR CHOICE</em></option>
+                <option value="ReactJs">ReactJs</option>
+                  <option value="AngularJs">AngularJs</option>
+                <option value="NodeJs">NodeJs</option>
+              <option value="GatsbyJs">GatsbyJs</option>
+            </select>
+
+            <p></p>
+
+        </section>
+        <!--section end-->
+    </body>
+    <!--body end-->
+
+    <!--script start-->
+    <script>
+        let select = document.querySelector(`select`);
+        let para = document.querySelector(`p`);
+
+        select.addEventListener("change" , change_it);
+
+        function change_it(){
+            let choice = select.value;
+            
+            //switch statement
+            switch( choice ){
+                case  'ReactJs':
+                    para.textContent = `You've selected ${choice.toUpperCase()}`;
+                    break;
+                
+                 case  'AngularJs':
+                    para.textContent = `You've selected ${choice.toUpperCase()}`;
+                    break;
+                
+                 case  'NodeJs':
+                    para.textContent = `You've selected ${choice.toUpperCase()}`;
+                    break;
+                
+                 case  'GatsbyJs':
+                    para.textContent = `You've selected ${choice.toUpperCase()}`;
+                    break;
+                    
+                default:
+                    para.textContent = ` `;
+            }
+        }
+    </script>
+    <!--script end-->
+</html>
+<!--html end-->
