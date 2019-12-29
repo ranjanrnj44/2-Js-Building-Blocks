@@ -19,9 +19,8 @@
             <select id="weather">
               <option value=""><em>MAKE YOUR CHOICE</em></option>
                 <option value="ReactJs">ReactJs</option>
-                  <option value="AngularJs">AngularJs</option>
-                <option value="NodeJs">NodeJs</option>
-              <option value="GatsbyJs">GatsbyJs</option>
+                <option value="AngularJs">AngularJs</option>
+               <option value="NodeJs">NodeJs</option>
             </select>
 
             <p></p>
@@ -36,33 +35,25 @@
         let select = document.querySelector(`select`);
         let para = document.querySelector(`p`);
 
-        select.addEventListener("change" , change_it);
-
-        function change_it(){
+        select.addEventListener("change" , function(){
             let choice = select.value;
-            
-            //switch statement
-            switch( choice ){
-                case  'ReactJs':
-                    para.textContent = `You've selected ${choice.toUpperCase()}`;
-                    break;
-                
-                 case  'AngularJs':
-                    para.textContent = `You've selected ${choice.toUpperCase()}`;
-                    break;
-                
-                 case  'NodeJs':
-                    para.textContent = `You've selected ${choice.toUpperCase()}`;
-                    break;
-                
-                 case  'GatsbyJs':
-                    para.textContent = `You've selected ${choice.toUpperCase()}`;
-                    break;
-                    
+
+            switch(choice){
+                case "ReactJs":
+                   para.textContent = `This is ${choice.toUpperCase()}`;
+                     break;
+                case "AngularJs":
+                   para.textContent = `This is ${choice.toUpperCase()}`;
+                     break;
+                case "NodeJs":
+                   para.textContent = `This is ${choice.toUpperCase()}`;
+                     break;
                 default:
-                    para.textContent = ` `;
+                   para.textContent = ` `;
             }
-        }
+        });
+
+       
     </script>
     <!--script end-->
 </html>

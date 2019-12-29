@@ -1,0 +1,46 @@
+<html>
+  <head>
+  </head>
+  
+  <body>
+    
+  <label for="search">Search by contact name: </label>
+  <input id="search" type="text">
+  <button>Search</button>
+
+  <p></p>
+    
+    <script>
+      let contents = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+      let iput = document.querySelector("input");
+      let btn = document.querySelector("button");
+      let para = document.querySelector("p");
+
+      btn.addEventListener("click" , function(){
+          let myname = iput.value.toLowerCase();
+              iput.value = "";
+              iput.focus();
+
+            for(let i=0 ; i<contents.length ; i++){
+                let content = contents[i];
+                //console.log(content);
+                let split_it = content.split(":");
+                let name = split_it[0].toLowerCase();
+                //console.log(name);
+                let number = split_it[1];
+                //console.log(number);
+                    if(myname === name){
+                    para.textContent = `${name} and the number is ${number}`;
+                    break;
+                    }
+                        else{
+                        para.textContent = `Can't Find`;
+                        }
+            }
+      });
+      
+
+    </script>
+  </body>
+  
+</html>

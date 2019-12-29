@@ -1,0 +1,46 @@
+<!--html start-->
+<html>
+    <!--head start-->
+    <head>
+        <title>Else_if Conditional</title>
+        <!--css start-->
+        <!--<link rel = "stylesheet" href="style.css"/>-->
+        <!--css end-->
+    </head>
+    <!--head end-->
+    
+    <!--body start-->
+    <body>
+        <!--section end-->
+        <section>
+           
+           <label for="changing">Select any of your choice : </label>
+            <select id="changing">
+                 <option value="black">Black</option>
+                <option value="white">White</option>
+            </select>
+            <h1>FEEL THE NEW CHANGE...</h1>
+
+        </section>
+        <!--section end-->
+    </body>
+    <!--body end-->
+
+    <!--script start-->
+    <script>
+        let select = document.querySelector(`select`);
+          //let choice = select.value;   is also can be given but it is not working, in line 39, check mate;
+          
+        function change_it(bg_color , txt_color){
+            document.body.style.backgroundColor = bg_color;
+            document.body.style.color = txt_color;
+        }
+
+        select.addEventListener("change" , function(){
+            (select.value === "white") ? change_it("white" , "black") : change_it("black" , "white");
+        });
+       
+    </script>
+    <!--script end-->
+</html>
+<!--html end-->
