@@ -1,0 +1,33 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    max-width: 820px;
+    margin: 0px auto;
+    font-family: exo;
+    padding: 30px 0;
+    background-color: royalblue;
+}
+
+/*li color*/
+li{
+    display: inline-block;
+    width: 100px;
+    padding: 15px;
+    margin: 3px;
+    background-color: crimson;
+    color: white;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+ul{
+    margin-top: 20px;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-weight: 900px;
+}
