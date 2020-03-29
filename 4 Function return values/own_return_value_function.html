@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Function library example</title>
+    <style>
+        input,
+        button {
+            font-size: 2em;
+            margin: 10px 1px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input class="numberInput" type="text">
+    <button>ok</button>
+    <p></p>
+
+    <script>
+        const input = document.querySelector('.numberInput');
+        const para = document.querySelector('p');
+        const btn = document.querySelector("button");
+        btn.addEventListener("click", fun)
+
+        //define all the function
+        //square
+        //cube
+        //factorial
+        function square(num) {
+            return num * num;
+        }
+
+        function cube(num) {
+            return num * num * num;
+        }
+
+        function fact(num) {
+            let temp = 1;
+            for (let i = 0; i <= num; i++) {
+                temp *= num;
+            }
+            return temp;
+        }
+
+        //function call
+        function fun() {
+            let ipval = input.value;
+            if (isNaN(ipval)) {
+                para.textContent = "Enter only number";
+            } else {
+                para.textContent = `Square  for ${ipval} is : ${square(ipval)} --
+                Cube for ${ipval} is : ${cube(ipval)} --
+                Factorial for ${ipval} is : ${fact(ipval)}`;
+            }
+            input.value = "";
+            input.focus();
+        }
+    </script>
+</body>
+
+</html>
