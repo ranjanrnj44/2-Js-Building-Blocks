@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title></title>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="fname">First name: </label>
+            <input id="fname" type="text">
+        </div>
+        <div>
+            <label for="lname">Last name: </label>
+            <input id="lname" type="text">
+        </div>
+        <div>
+            <input id="submit" type="submit">
+        </div>
+    </form>
+    <p></p>
+
+    <script>
+        let form = document.querySelector("form");
+        let fname = document.getElementById("fname");
+        let lname = document.getElementById("lname");
+        let para = document.querySelector("p");
+        para.textContent = " ";
+
+        form.onsubmit(function(e) {
+            if (fname === "" || lname === "") {
+                e.preventDefault();
+                para.textContent = "Don't leave anything empty";
+            } else {
+                //since form is submitting we might not be seeing result which is below
+                para.textContent = `${fname} - ${lname}`;
+            }
+        });
+    </script>
+</body>
+
+</html>
